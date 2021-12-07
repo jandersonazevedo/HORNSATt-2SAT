@@ -1,0 +1,17 @@
+ALGORITMO HORNSAT(C)
+Entrada: Um conjunto C de cláusulas de Horn.
+Saída: verdadeiro se C é satisfazível, ou falso caso contrário.
+
+se ⊥ ∈ C então
+    retorne falso.
+fim se
+
+se C não contém fatos então
+    retorne verdadeiro
+fim se
+
+Seja p ∈ C um fato.
+
+Seja C' obtida de C removendo-se ¬p de suas cláusulas e removendo completamente as cláusulas que contém p.
+
+retorne HornSAT(C')
